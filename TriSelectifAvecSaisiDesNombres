@@ -1,0 +1,20 @@
+Nnombre=int(input('Indiquez la taille de votre liste:  ')) #longueur de la liste
+ListeT = [] #Liste vide
+k=0 #compteur
+for loop in range(Nnombre):
+    nombre=int(input('Nombre:  '))
+    ListeT.append(nombre) #on remplit la liste
+    k=+1
+
+print("Votre liste d'origine: ", ListeT) 
+
+for I in range(0, Nnombre - 1): 
+        min = I
+        for test in range(I, len(ListeT)):
+            if ListeT[min] > ListeT[test]:
+                min = test
+        
+        ListeT[min], ListeT[I] = ListeT[I], ListeT[min] #on echange les nombres de position
+        
+print("Votre liste triée: ", ListeT) #on affiche la liste triée
+    
